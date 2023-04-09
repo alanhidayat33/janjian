@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('agendas', function (Blueprint $table) {
+        Schema::table('user_spare_times', function (Blueprint $table) {
             //
-            $table->string('utang');
+            $table->timestamp('end_date')->nullable()->change();
         });
     }
 
@@ -22,7 +22,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('agendas', function (Blueprint $table) {
+        Schema::table('user_spare_times', function (Blueprint $table) {
             //
         });
     }
